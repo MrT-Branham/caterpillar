@@ -3,20 +3,20 @@ import turtle as trtl
 #create a turtle object
 painter = trtl.Turtle()
 
+def draw_circle(radius, color):
+    painter.begin_fill()
+    painter.color(color)
+    painter.circle(radius)
+    painter.end_fill()
+
 # first circle
-painter.begin_fill()
-painter.color("blue")
-painter.circle(100)
-painter.end_fill()
+draw_circle(100, "blue")
 
 # second circle
 painter.penup()
 painter.forward(200)
 painter.pendown()
-painter.begin_fill()
-painter.color("red")
-painter.circle(100)
-painter.end_fill()
+draw_circle(100, "red")
 
 #set the windows settings
 wn = trtl.Screen()
